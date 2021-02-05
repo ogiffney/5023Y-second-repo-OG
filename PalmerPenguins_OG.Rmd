@@ -16,7 +16,7 @@ library(plotly)
 
 ## Plot
 
-```{r penguins, echo=FALSE}
+```{r penguins, echo=FALSE, message=FALSE, warning=FALSE}
 penguin_graph <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_point(aes(size = body_mass_g, 
                  color = species),
