@@ -15,15 +15,13 @@ library(plotly)
 ## Palmer Penguins
 
 
-
-```{r palmerpenguins}
-summary(palmerpenguins)
+```{r penguins}
+summary(penguins)
 ```
 
 ## Plot
 
-
-```{r palmerpenguins, echo=FALSE}
+```{r penguins, echo=FALSE}
 penguin_graph <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_point(aes(size = body_mass_g, 
                  color = species),
@@ -36,4 +34,3 @@ penguin_graph <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_
 penguin_graph
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
