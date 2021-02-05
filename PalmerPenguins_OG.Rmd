@@ -29,3 +29,8 @@ penguin_graph <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_
 penguin_graph
 ```
 
+### Interactive Plot
+
+```{r penguins2, echo=FALSE, warning=FALSE}
+ggplotly(penguin_graph, tooltip = c("species"))
+```
