@@ -1,0 +1,39 @@
+---
+title: "Palmer Penguins GitHub Work"
+author: "Olivia Giffney"
+date: "05/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+library(plotly)
+```
+
+## Palmer Penguins
+
+
+
+```{r palmerpenguins}
+summary(palmerpenguins)
+```
+
+## Plot
+
+
+```{r palmerpenguins, echo=FALSE}
+penguin_graph <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(aes(size = body_mass_g, 
+                 color = species),
+             alpha = 0.4) +
+  scale_color_manual(values = c("purple","orange","black")) +
+  theme_minimal() +
+  labs(x = "bill length (mm)",
+       y = "bill depth mm",
+       title = "Penguin measurements")
+penguin_graph
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
